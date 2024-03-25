@@ -15,8 +15,8 @@
 # Setup
 
 ```bash
-$ git clone https://github.com/FallenDeity/react-next-tailwind-template
-$ cd react-next-tailwind-template
+$ git clone https://github.com/riansopian/pokedex-asessment.git
+$ cd pokedex-asessment
 $ npm install
 ```
 

@@ -25,10 +25,9 @@ export interface LikedMon {
 }
 
 export const meta = {
-	title: "PokeLore",
-	description: "A fan made Pokedex",
+	title: "PokeDex",
+	description: "Pokedex Web",
 	keywords: ["Pokemon", "PokeLore", "Pokedex", "PokeApi"],
-	authors: [{ name: "FallenDeity" }],
 	// metadataBase: new URL(String(process.env.NEXTAUTH_URL)),
 	robots: {
 		follow: true,
@@ -36,8 +35,8 @@ export const meta = {
 		nocache: true,
 	},
 	openGraph: {
-		title: "PokeLore",
-		description: "A fan made Pokedex",
+		title: "PokeDex",
+		description: "Pokedex Web",
 		images: "/logo.png",
 		type: "website",
 	},

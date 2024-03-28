@@ -9,9 +9,9 @@ import { meta, MetaData } from "@/lib/models";
 // eslint-disable-next-line @typescript-eslint/require-await
 export async function generateMetadata(): Promise<MetaData> {
 	meta.title = "PokeDex";
-	meta.description = "A fan-made PokeDex";
+	meta.description = "A Website PokeDex";
 	meta.openGraph.title = "PokeDex";
-	meta.openGraph.description = "A fan-made PokeDex";
+	meta.openGraph.description = "A Website PokeDex";
 	return meta;
 }
 
@@ -33,7 +33,7 @@ export default function Home(): React.JSX.Element {
 							className="h-40 w-40 cursor-pointer"
 						/>
 						<div className="flex flex-col items-center justify-center space-y-5">
-							<h1 className="text-center text-3xl font-bold md:text-5xl">Welcome to PokeLore</h1>
+							<h1 className="text-center text-3xl font-bold md:text-5xl">Welcome to PokeDex</h1>
 						</div>
 					</div>
 				</section>

@@ -11,7 +11,7 @@ import ColorThief from "node_modules/colorthief/dist/color-thief.mjs";
 import {
 	EvolutionChain,
 	EvolutionClient,
-	ItemClient,
+	// ItemClient,
 	MoveClient,
 	Pokemon,
 	PokemonClient,
@@ -39,24 +39,24 @@ export default function PokemonContainer({ params }: { params: { slug: string } 
 	const [evolutionMons, setEvolutionMons] = useState<Pokemon[]>([]);
 	const [color, setColor] = useRecoilState(accentColor);
 	const [locations, setLocations] = React.useState<string[]>([]);
-	const [berries, setBerries] = useState<any[]>([]);
+	// const [berries, setBerries] = useState<any[]>([]);
 
-	useEffect(() => {
-		const fetchBerries = async (): Promise<void> => {
-			try {
-				const itemClient = new ItemClient();
-				const allBerries = [];
-				for (let berryId = 1; berryId <= 64; berryId++) {
-					const berry = await itemClient.getItemById(berryId);
-					allBerries.push(berry);
-				}
-				setBerries(allBerries);
-			} catch (error) {
-				console.error("Error fetching berries:", error);
-			}
-		};
-		void fetchBerries();
-	}, []);
+	// useEffect(() => {
+	// 	const fetchBerries = async (): Promise<void> => {
+	// 		try {
+	// 			const itemClient = new ItemClient();
+	// 			const allBerries = [];
+	// 			for (let berryId = 1; berryId <= 64; berryId++) {
+	// 				const berry = await itemClient.getItemById(berryId);
+	// 				allBerries.push(berry);
+	// 			}
+	// 			setBerries(allBerries);
+	// 		} catch (error) {
+	// 			console.error("Error fetching berries:", error);
+	// 		}
+	// 	};
+	// 	void fetchBerries();
+	// }, []);
 
 	useEffect(() => {
 		async function getMon(): Promise<void> {
@@ -233,7 +233,7 @@ export default function PokemonContainer({ params }: { params: { slug: string } 
 									<p className="w-[2rem]">{stat.base_stat}</p>
 								</div>
 							))}
-							<div className="pokemon-container overflow-auto">
+							{/* <div className="pokemon-container overflow-auto">
 								<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 									{berries.map((berry: { name: string; sprites: { default?: string } }) => (
 										<div className="berry-info" key={berry.name}>
@@ -250,7 +250,7 @@ export default function PokemonContainer({ params }: { params: { slug: string } 
 									))}
 								</div>
 								<button>Feed Pokemon</button>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					<div className="m-[3rem] flex justify-center" style={{ borderColor: color.border }}>
